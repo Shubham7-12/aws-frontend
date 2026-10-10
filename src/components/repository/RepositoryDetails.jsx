@@ -38,7 +38,7 @@ const RepositoryDetails = () => {
         throw new Error("Please log in to change repository visibility.");
       }
 
-      const response = await fetch(`http://localhost:3000/repo/toggle/${id}`, {
+      const response = await fetch(`http://13.60.71.205:3000/repo/toggle/${id}`, {
         method: "PATCH",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -85,7 +85,7 @@ const RepositoryDetails = () => {
     try {
       setSaving(true);
 
-      const response = await fetch(`http://localhost:3000/repo/update/${id}`, {
+      const response = await fetch(`http://13.60.71.205:3000/repo/update/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -138,7 +138,7 @@ const RepositoryDetails = () => {
         throw new Error("Please log in to delete this repository.");
       }
 
-      const response = await fetch(`http://localhost:3000/repo/delete/${id}`, {
+      const response = await fetch(`http://13.60.71.205:3000/repo/delete/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -169,7 +169,7 @@ const RepositoryDetails = () => {
 
         const token = localStorage.getItem("token");
 
-        const response = await fetch(`http://localhost:3000/repo/${id}`, {
+        const response = await fetch(`http://13.60.71.205:3000/repo/${id}`, {
           headers: token ? { Authorization: `Bearer ${token}` } : {},
         });
 

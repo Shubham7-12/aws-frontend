@@ -23,7 +23,7 @@ const CreateRepository = () => {
             setLoading(true);
 
             await axios.post(
-                "http://localhost:3000/repo/create",
+                "http://13.60.71.205:3000/repo/create",
                 {
                     name,
                     description,
